@@ -24,19 +24,16 @@ export function SectionToolDefinitions({
   toolNameToDefinitionNumber,
 }: SectionToolDefinitionsProps) {
   return (
-    <div className="[&_.io-message-content]:px-2 [&_.io-message-header]:px-2">
-      <div className="border-border mb-4 border-b pb-4">
-        <div className="io-message-header px-1 py-1 text-sm font-bold capitalize">
-          Tools
-        </div>
-        <ToolCallDefinitionCard
-          tools={tools}
-          toolCallCounts={toolCallCounts}
-          toolCallsByName={toolCallsByName}
-          toolNameToDefinitionNumber={toolNameToDefinitionNumber}
-          className="px-2"
-        />
+    <div className="border-border mb-4 border-b pb-4">
+      <div className="io-message-header px-1 py-1 text-base font-bold capitalize">
+        Tools
       </div>
+      <ToolCallDefinitionCard
+        tools={tools}
+        toolCallCounts={toolCallCounts}
+        toolCallsByName={toolCallsByName}
+        toolNameToDefinitionNumber={toolNameToDefinitionNumber}
+      />
     </div>
   );
 }
