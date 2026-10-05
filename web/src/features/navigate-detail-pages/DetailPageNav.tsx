@@ -144,7 +144,7 @@ export const DetailPageNav = (props: {
           <HeaderActionButton
             label="Navigate up"
             shortcut="K"
-            icon={<ArrowUp className="h-4 w-4" />}
+            icon={<ArrowUp className="size-3.5" />}
             active={shortcutPulse === "previous"}
             disabled={!previousPageEntry}
             onClick={() => {
@@ -156,7 +156,7 @@ export const DetailPageNav = (props: {
           <HeaderActionButton
             label="Navigate down"
             shortcut="J"
-            icon={<ArrowDown className="h-4 w-4" />}
+            icon={<ArrowDown className="size-3.5" />}
             active={shortcutPulse === "next"}
             disabled={!nextPageEntry}
             onClick={() => {

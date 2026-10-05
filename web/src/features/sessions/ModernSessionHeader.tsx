@@ -432,7 +432,7 @@ export function ModernSessionHeader({
     });
   });
   return (
-    <div className="border-b px-3 pt-1 pb-1.5">
+    <div className="border-b px-4 pt-1 pb-1.5 font-mono">
       <SingleLineOverflowList
         spacing="comfortable"
         items={pills}
@@ -446,11 +446,15 @@ export function ModernSessionHeader({
             onOpenChange={handleMetadataEditorOpenChange}
           >
             <PopoverTrigger asChild>
-              <BadgeShell asChild data-session-header-pill="true">
-                <button type="button" aria-label="Add metadata JSONPath">
-                  <Plus className="h-3 w-3" />
-                </button>
-              </BadgeShell>
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon-xs"
+                aria-label="Add metadata JSONPath"
+                data-session-header-pill="true"
+              >
+                <Plus className="size-3.5" />
+              </Button>
             </PopoverTrigger>
             {isMetadataEditorOpen ? (
               <MetadataJsonPathEditorContent

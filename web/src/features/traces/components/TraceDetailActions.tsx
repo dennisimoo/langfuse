@@ -71,9 +71,9 @@ export function TraceDetailActions({
   ];
 
   const downloadIcon = isDownloading ? (
-    <Loader2 className="h-4 w-4 animate-spin" />
+    <Loader2 className="size-3.5 animate-spin" />
   ) : (
-    <Download className="h-4 w-4" />
+    <Download className="size-3.5" />
   );
 
   return (
@@ -130,7 +130,7 @@ export function TraceDetailActions({
                   {({ getTriggerProps }) => (
                     <HeaderActionButton
                       label="More actions"
-                      icon={<MoreVertical className="h-4 w-4" />}
+                      icon={<MoreVertical className="size-3.5" />}
                       {...getTriggerProps()}
                     />
                   )}

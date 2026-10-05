@@ -2,6 +2,7 @@
 /**
  * Simple metadata badges for ObservationDetailView
  * Each badge handles its own null checks and returns null when data is unavailable
+ * Metric values render in mono; `contents` keeps the wrapper out of layout.
  */
 
 import { Badge } from "@/src/components/design-system/Badge/Badge";
@@ -14,7 +15,11 @@ export function LatencyBadge({
 }) {
   if (latencySeconds == null) return null;
 
-  return <Badge color="ghost" text={formatIntervalSeconds(latencySeconds)} />;
+  return (
+    <span className="contents font-mono">
+      <Badge color="ghost" text={formatIntervalSeconds(latencySeconds)} />
+    </span>
+  );
 }
 
 export function TimeToFirstTokenBadge({
@@ -25,10 +30,12 @@ export function TimeToFirstTokenBadge({
   if (timeToFirstToken == null) return null;
 
   return (
-    <Badge
-      color="ghost"
-      label="ttft"
-      text={formatIntervalSeconds(timeToFirstToken)}
-    />
+    <span className="contents font-mono">
+      <Badge
+        color="ghost"
+        label="ttft"
+        text={formatIntervalSeconds(timeToFirstToken)}
+      />
+    </span>
   );
 }
